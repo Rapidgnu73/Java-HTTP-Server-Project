@@ -1,0 +1,5 @@
+2025-08-30 12:50:12 | /192.168.201.94 | GET / HTTP/1.1 | File exists: true
+2025-08-30 12:50:13 | /192.168.201.94 | GET /about.html HTTP/1.1 | File exists: true
+2025-08-30 12:50:15 | /192.168.201.94 | GET /index.html HTTP/1.1 | File exists: true
+2025-08-30 12:50:15 | /192.168.201.94 | GET /login.html HTTP/1.1 | File exists: true
+2025-08-30 12:50:16 | /192.168.201.94 | GET /index.html HTTP/1.1 | File exists: true
