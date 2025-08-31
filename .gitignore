@@ -1,5 +1,9 @@
 
 *.class
+*.csv
+*.txt
+*.js
+*.css
 
 *.log
 

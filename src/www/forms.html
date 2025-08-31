@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms - Java HTTP Server Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header fade" data-delay="30">
+    <div class="brand">
+      <div class="logo-mark">JS</div>
+      <div class="logo-text">Java HTTP Server Project</div>
+    </div>
+    <button id="theme-toggle" style="padding:6px 12px; border-radius:6px; cursor:pointer;">Change Theme</button>
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="info.html">Info</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+  </header>
+
+  <section class="form-section">
+    <h2>Contact Form</h2>
+    <p class="form-subtitle">Fill in your details below and we’ll get back to you.</p>
+    
+    <form action="thankyou.html" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+  
+  <script src="effects.js"></script>
+</body>
+</html>

@@ -1,58 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Java HTTP Server</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #333;
-    }
-    .container {
-      background: white;
-      padding: 2rem 3rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      text-align: center;
-      max-width: 400px;
-    }
-    h1 {
-      margin-bottom: 1rem;
-      color: #4a47a3;
-    }
-    p {
-      margin-bottom: 2rem;
-      font-size: 1.1rem;
-    }
-    a {
-      display: block;
-      margin: 0.5rem 0;
-      padding: 0.7rem;
-      text-decoration: none;
-      background: #4a47a3;
-      color: white;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-      font-weight: bold;
-    }
-    a:hover {
-      background: #6c63ff;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Java HTTP Server Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>🌐 My Java HTTP Server</h1>
-    <p>Select a page to explore:</p>
-    <a href="./about.html">About Page</a>
-    <a href="./login.html">Login Page</a>
-  </div>
+
+  <header class="header fade" data-delay="30">
+    <div class="brand">
+      <div class="logo-mark">JS</div>
+      <div class="logo-text">Java HTTP Server Project</div>
+    </div>
+
+    <button id="theme-toggle" style="padding:6px 12px; border-radius:6px; cursor:pointer;">Change Theme</button>
+
+
+    <nav class="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="info.html">Info</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-left fade" data-delay="80">
+        <div class="h-eyebrow">Built with</div>
+        <div class="h-title">Java • Sockets • HTTP</div>
+        <div class="h-desc muted">A minimal Java HTTP server that serves static assets, handles POST form submissions, and demonstrates core networking concepts with multi-threading.</div>
+        <div style="margin-top:18px">
+          <a class="cta" href="about.html"><span>Learn more</span></a>
+        </div>
+      </div>
+
+      <div class="illustration fade" data-delay="120" aria-hidden="true">
+        <!-- stylized 3D-like SVG illustration (coin + phone) -->
+        <svg width="420" height="320" viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0" stop-color="#00e5ff"/>
+              <stop offset="1" stop-color="#ff3ec5"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="40%" r="60%">
+              <stop offset="0%" stop-color="#00e5ff" stop-opacity="0.18"/>
+              <stop offset="60%" stop-color="#ff3ec5" stop-opacity="0.06"/>
+              <stop offset="100%" stop-color="#0b0f14" stop-opacity="0"/>
+            </radialGradient>
+            <filter id="blur" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="10" result="b"/>
+              <feBlend in="SourceGraphic" in2="b"/>
+            </filter>
+          </defs>
+
+          <!-- background glow -->
+          <rect x="0" y="0" width="420" height="320" rx="18" fill="url(#glow)"/>
+
+          <!-- phone base -->
+          <g transform="translate(40,60)">
+            <rect x="0" y="60" width="340" height="160" rx="18" fill="#0f1113" stroke="rgba(255,255,255,0.03)"/>
+            <rect x="12" y="72" width="316" height="136" rx="12" fill="url(#g1)" opacity="0.06"/>
+            <!-- circular stage -->
+            <ellipse cx="170" cy="5" rx="72" ry="14" fill="#081019" transform="translate(0,48)"/>
+            <circle cx="170" cy="-6" r="48" fill="#071019" transform="translate(0,68)"/>
+            <circle cx="170" cy="-6" r="36" fill="url(#g1)" opacity="0.18" transform="translate(0,68)"/>
+            <!-- coin -->
+            <g transform="translate(170,-14)">
+              <circle r="34" fill="url(#g1)" stroke="#071018" stroke-width="2"/>
+              <path d="M -12 -4 L 0 -18 L 12 -4 L 0 10 z" fill="#071018" opacity="0.9"/>
+              <circle r="10" fill="#071018" opacity="0.06"/>
+            </g>
+
+            <!-- small floating cubes -->
+            <rect x="260" y="16" width="12" height="12" rx="2" fill="#081019" opacity="0.9" transform="rotate(15 266 22)"/>
+            <rect x="290" y="8" width="10" height="10" rx="2" fill="#071018" opacity="0.85" transform="rotate(-10 295 13)"/>
+          </g>
+
+          <!-- glow overlay -->
+          <g transform="translate(0,0)" filter="url(#blur)">
+            <ellipse cx="300" cy="200" rx="80" ry="28" fill="url(#g1)" opacity="0.08"/>
+            <ellipse cx="120" cy="220" rx="120" ry="40" fill="#ff3ec5" opacity="0.04"/>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="info-grid fade" data-delay="160" style="margin-top:28px">
+      <div class="info-card">
+        <h3>GET & POST</h3>
+        <p>Handles HTTP requests and parses form POST bodies (x-www-form-urlencoded).</p>
+      </div>
+      <div class="info-card">
+        <h3>Static Files</h3>
+        <p>Serves HTML, CSS, JS, images with proper MIME types.</p>
+      </div>
+      <div class="info-card">
+        <h3>Concurrency</h3>
+        <p>Thread-pool based client handling using ExecutorService.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer fade" data-delay="200">
+    Built for a Java Networking project • © 2025
+  </footer>
+
+  <script src="effects.js"></script>
 </body>
 </html>

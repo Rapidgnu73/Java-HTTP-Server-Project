@@ -1,73 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About - My Java HTTP Server</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      color: #333;
-    }
-    .container {
-      background: white;
-      padding: 2rem 3rem;
-      border-radius: 15px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-      text-align: center;
-      max-width: 600px;
-    }
-    h1 {
-      margin-bottom: 1rem;
-      color: #e85a4f;
-    }
-    p {
-      margin: 1rem 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    a {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 0.7rem 1.2rem;
-      text-decoration: none;
-      background: #e85a4f;
-      color: white;
-      border-radius: 8px;
-      transition: background 0.3s ease;
-      font-weight: bold;
-    }
-    a:hover {
-      background: #f76c6c;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Java HTTP Server Project</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>About This Server 🌐</h1>
-    <p>
-      Welcome to my custom-built <strong>Java HTTP Server</strong>.  
-      This project demonstrates the core concepts of <em>computer networking</em>,  
-      including <strong>socket programming</strong>, <strong>TCP connections</strong>, and the <strong>HTTP protocol</strong>.
-    </p>
-    <p>
-      The server is capable of handling multiple clients using the  
-      <strong>request-response model</strong>, routing requests such as  
-      <code>/</code>, <code>/about</code>, and <code>/login</code>.  
-    </p>
-    <p>
-      Behind the scenes, this server leverages the <strong>Transport Layer</strong> (TCP),  
-      while speaking the language of the <strong>Application Layer</strong> (HTTP).  
-      Each packet travels across the stack — from <strong>IP addressing</strong> to  
-      <strong>port numbers</strong> — before finally rendering this page in your browser.
-    </p>
-    <a href="./index.html">⬅ Back to Home</a>
-  </div>
+  <header class="header fade" data-delay="20">
+    <div class="brand">
+      <div class="logo-mark">JS</div>
+      <div class="logo-text">Java HTTP Server Project</div>
+    </div>
+    <button id="theme-toggle" style="padding:6px 12px; border-radius:6px; cursor:pointer;">Change Theme</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="info.html">Info</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="content fade" data-delay="80">
+      <h2 style="color:var(--accent2)">About</h2>
+      <p class="muted" style="max-width:760px; margin:18px auto; font-size:16px;">
+        A passionate Java Dev, interested in working and understanding Computer Networks.
+        This project documents core socket programming concepts, HTTP parsing, multi-threading,
+        and static/dynamic content serving implemented in Java.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer fade" data-delay="200">© 2025 — Java HTTP Server Project</footer>
+  <script src="effects.js"></script>
 </body>
 </html>

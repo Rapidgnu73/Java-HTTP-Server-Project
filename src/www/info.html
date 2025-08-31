@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Info — Java HTTP Server Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header fade" data-delay="20">
+    <div class="brand">
+      <div class="logo-mark">JS</div>
+      <div class="logo-text">Java HTTP Server Project</div>
+    </div>
+    <button id="theme-toggle" style="padding:6px 12px; border-radius:6px; cursor:pointer;">Change Theme</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="info.html" class="active">Info</a>
+      <a href="forms.html">Forms</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2 class="fade" data-delay="60" style="color:var(--accent1)">Project Details</h2>
+      <div class="info-grid">
+        <div class="info-card fade" data-delay="90">
+          <h3>HTTP Parsing</h3>
+          <p>Parses request line, headers (Content-Length, Content-Type) and reads POST bodies accurately.</p>
+        </div>
+
+        <div class="info-card fade" data-delay="110">
+          <h3>Routing</h3>
+          <p>Simple path-based routing for '/', '/about', '/info', '/forms' and static resource paths.</p>
+        </div>
+
+        <div class="info-card fade" data-delay="130">
+          <h3>Static Assets</h3>
+          <p>Serves files from a 'www' folder using correct MIME types and binary-safe streaming for images.</p>
+        </div>
+
+        <div class="info-card fade" data-delay="150">
+          <h3>Concurrency</h3>
+          <p>Fixed thread pool (ExecutorService) handles many clients without blocking the main accept loop.</p>
+        </div>
+
+        <div class="info-card fade" data-delay="170">
+          <h3>Logging</h3>
+          <p>Access logs with timestamps, client IPs, and requested resources are appended to server_logs.txt.</p>
+        </div>
+
+        <div class="info-card fade" data-delay="190">
+          <h3>Data Storage</h3>
+          <p>Form submissions are parsed and persisted to a CSV file with enforced field ordering.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer fade" data-delay="220">© 2025 — Java HTTP Server Project</footer>
+  <script src="effects.js"></script>
+</body>
+</html>
